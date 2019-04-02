@@ -2901,12 +2901,15 @@
          <p>The treatment of the <code>underflow</code> exception is defined in <specref
                ref="op.numeric"/>. </p>
          <p>If either argument is <code>NaN</code> then the result is <code>NaN</code>.</p>
-         <p>If <code>$y</code> is positive and <code>$x</code> is positive and finite, then (subject
-            to rules for overflow, underflow and approximation) the value of <code>atan2($y,
-               $x)</code> is <code>atan($y div $x)</code>.</p>
+         <p>If <code>$y</code> is positive or negative, and <code>$x</code> is positive and finite,
+            then (subject to rules for overflow, underflow and approximation) the value of
+            <code>math:atan2($y, $x)</code> is <code>math:atan($y div $x)</code>.</p>
          <p>If <code>$y</code> is positive and <code>$x</code> is negative and finite, then (subject
-            to the same caveats) the value of <code>atan2($y, $x)</code> is <var>π</var>
-            <code>- atan($y div $x)</code>.</p>
+            to the same caveats) the value of <code>math:atan2($y, $x)</code> is
+            <code>math:atan($y div $x) + math:pi()</code>.</p>
+         <p>If <code>$y</code> is negative and <code>$x</code> is negative and finite, then (subject
+            to the same caveats) the value of <code>math:atan2($y, $x)</code> is
+            <code>math:atan($y div $x) - math:pi()</code>.</p>
          <p>Some results for special values of the arguments are shown in the examples below.</p>
 
       </fos:notes>
